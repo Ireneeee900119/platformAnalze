@@ -45,29 +45,3 @@ graph TD;
   C1 & C2 & D1 --> E[統一格式轉為 DataFrame];
   E --> F[關鍵字篩選（品牌 / 類型）];
   F --> G[視覺化比較圖表]
-
-執行方式
-
-1. 安裝套件
-pip install -U pymongo requests beautifulsoup4 pandas matplotlib
-
-2. 啟動 MongoDB（需本機安裝）
-
-確保本地 MongoDB 啟動，帳號密碼為：
-	•	帳號：tina
-	•	密碼：0000
-	•	連線參數：localhost:27017
-
-3. 執行 Notebook（或 Python Script）
-
-步驟：
-	•	使用 pchome() 函數爬取 PChome 商品
-	•	使用 etmall() 函數爬取東森商品
-	•	使用 momo() → csv2json() 取得 MOMO 商品資料
-	•	使用 callPchome()、callEtmall()、callMOMO() 轉為 DataFrame
-	•	執行 callTotal() 與 plt.plot() 進行可視化分析
-注意事項
-	•	MOMO 網站需以 HTML 方式解析，解析元素為 .prdInfoWrap、.prdName、.price
-	•	PChome 與 ETMall 則可直接使用 JSON API 呼叫
-	•	若 MongoDB 未開啟或權限設定錯誤，請先檢查帳密與連線狀態
-	•	資料存在重複與不同命名（例如 “變頻”/“定頻”）情況，需自行進行清理或比對
