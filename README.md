@@ -70,8 +70,8 @@ pip install -U pymongo requests beautifulsoup4 pandas matplotlib lxml
 
 - Host：`localhost`
 - Port：`27017`
-- Username：`tina`
-- Password：`0000`
+- Username：
+- Password：
 
 ---
 
